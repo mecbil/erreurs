@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{% block title %}Suivi des Erreurs — Bil{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ asset('styles/main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+
+    <div class="noise" aria-hidden="true"></div>
+
+    <div class="container">
+
+        <nav class="global-nav">
+            <a href="{{ path('app_accueil') }}" class="nav-link">Matières</a>
+            <a href="{{ path('app_categories') }}" class="nav-link">Par catégorie</a>
+        </nav>
+
+        <header>
+            <div class="eyebrow">CRPE 2026 — Bil</div>
+            <h1>Suivi des <span>Erreurs</span></h1>
+            <div class="subtitle">{% block subtitle %}{% endblock %}</div>
+        </header>
+
+        {% block body %}{% endblock %}
+
+    </div>
+
+    {% block javascripts %}
+        <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    {% endblock %}
+
+</body>
+</html>

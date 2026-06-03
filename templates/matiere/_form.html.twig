@@ -1,0 +1,25 @@
+<div class="modal-overlay" id="modal">
+    <div class="modal-box">
+        <div class="modal-header">
+            {% if matiere.id %}
+                Modifier {{ matiere.nomMat }}
+            {% else %}
+                Ajouter une matière
+            {% endif %}
+        </div>
+        <form method="post" action="{% if matiere.id %}{{ path('app_matiere_edit', {id: matiere.id}) }}{% else %}{{ path('app_matiere_add') }}{% endif %}">
+            <div class="form-field">
+                <label class="form-label">Nom</label>
+                <input type="text" name="nom" value="{{ matiere.nomMat }}" required>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Couleur</label>
+                <input type="color" name="couleur" value="{{ matiere.couleurMat }}">
+            </div>
+            <div class="modal-actions">
+                <button type="submit" class="add-btn">Enregistrer</button>
+                <button type="button" class="reset-btn" onclick="document.getElementById('modal').remove()">Annuler</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Par catégorie — Suivi des Erreurs{% endblock %}
+{% block subtitle %}Toutes les catégories{% endblock %}
+
+{% block body %}
+
+{% for matiere in matieres %}
+    {% if matiere.categories|length > 0 %}
+    <section style="margin-bottom: 36px;">
+
+        <div class="matiere-section-title">
+            <div class="matiere-dot" style="background: {{ matiere.couleurMat }}"></div>
+            {{ matiere.nomMat }}
+        </div>
+
+        <div class="cat-list">
+            {% for categorie in matiere.categories %}
+                {% set total = 0 %}
+                {% for sousCat in categorie.sousCategories %}
+                    {% set total = total + sousCat.erreurs|length %}
+                {% endfor %}
+
+                <a href="{{ path('app_categorie_erreurs', {id: categorie.id}) }}"
+                   class="cat-list-item">
+                    <span class="cat-list-nom">{{ categorie.nomCat }}</span>
+                    <span class="cat-count">{{ total }}</span>
+                </a>
+            {% endfor %}
+        </div>
+
+    </section>
+    {% endif %}
+{% endfor %}
+
+{% endblock %}

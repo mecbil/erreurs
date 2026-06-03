@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ categorie.nomCat }} — Suivi des Erreurs{% endblock %}
+{% block subtitle %}{{ categorie.nomCat }} — {{ categorie.matiere.nomMat }}{% endblock %}
+
+{% block body %}
+
+<a href="{{ path('app_categories') }}" class="back-btn">← Par catégorie</a>
+
+{% for sousCat in categorie.sousCategories %}
+    {% if sousCat.erreurs|length > 0 %}
+
+    <section class="cat-section">
+        <button type="button" class="cat-header">
+            <div class="cat-dot" style="background: {{ categorie.matiere.couleurMat }}"></div>
+            <div class="cat-name">{{ sousCat.nomSousCat }}</div>
+            <div class="cat-count">{{ sousCat.erreurs|length }}</div>
+            <span class="cat-toggle">▼</span>
+        </button>
+
+        <div class="cat-body">
+            {% for erreur in sousCat.erreurs %}
+            <div class="err-item">
+                <div class="err-wrong">{{ erreur.erreurTxt }}</div>
+                <div class="err-right">{{ erreur.correctionTxt }}</div>
+                <div class="err-meta">
+                    <span class="status-badge {{ erreur.statutErr == 'À revoir' ? 'revoir' : (erreur.statutErr == 'En cours' ? 'encours' : 'maitrise') }}">
+                        {{ erreur.statutErr }}
+                    </span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    {% endif %}
+{% else %}
+    <div class="empty-cat">Aucune erreur dans cette catégorie.</div>
+{% endfor %}
+
+<script>
+document.querySelectorAll('.cat-header').forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.classList.toggle('open');
+        btn.closest('.cat-section').querySelector('.cat-body').classList.toggle('open');
+    });
+});
+</script>
+
+{% endblock %}

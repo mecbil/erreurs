@@ -1,0 +1,39 @@
+{% for categorie in matiere.categories %}
+    {% for sousCat in categorie.sousCategories %}
+        {% for erreur in sousCat.erreurs %}
+            {% if filtre == 'all' or erreur.statutErr == filtre %}
+                <div class="err-item" data-status="{{ erreur.statutErr }}">
+                    <div class="err-wrong">{{ erreur.erreurTxt }}</div>
+                    <div class="err-right">
+                        {{ erreur.correctionTxt }}
+                        <br><span style="font-size:10px;color:var(--muted)">{{ sousCat.nomSousCat }}</span>
+                    </div>
+                    <div class="err-meta">
+                        <span>{{ erreur.addedErr|date('d/m') }}</span>
+                    </div>
+                    <div class="err-actions">
+                        <button class="statut-btn down"
+                                hx-post="{{ path('app_erreur_statut', {id: erreur.id, direction: 'down'}) }}"
+                                hx-target="#badge-{{ erreur.id }}"
+                                hx-swap="outerHTML">−</button>
+
+                        <span id="badge-{{ erreur.id }}"
+                              class="status-badge {{ erreur.statutErr == 'À revoir' ? 'revoir' : (erreur.statutErr == 'En cours' ? 'encours' : 'maitrise') }}">
+                            {{ erreur.statutErr }}
+                        </span>
+
+                        <button class="statut-btn up"
+                                hx-post="{{ path('app_erreur_statut', {id: erreur.id, direction: 'up'}) }}"
+                                hx-target="#badge-{{ erreur.id }}"
+                                hx-swap="outerHTML">+</button>
+
+                        <form method="post" action="{{ path('app_erreur_delete', {id: erreur.id}) }}" style="display:inline">
+                            <input type="hidden" name="matiere_id" value="{{ matiere.id }}">
+                            <button type="submit" class="del-btn">×</button>
+                        </form>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endfor %}

@@ -1,0 +1,26 @@
+
+<div class="modal-overlay" id="modal">
+    <div class="modal-box">
+        <div class="modal-header">
+            {% if sousCategorie.id %}
+                Modifier {{ sousCategorie.nomSousCat }}
+            {% else %}
+                Ajouter une sous-catégorie
+            {% endif %}
+        </div>
+        <form method="post" action="{% if sousCategorie.id %}{{ path('app_souscategorie_edit', {id: sousCategorie.id}) }}{% else %}{{ path('app_souscategorie_add') }}{% endif %}">
+            <input type="hidden" name="matiere_id" value="{{ matiereId }}">
+            {% if not sousCategorie.id %}
+                <input type="hidden" name="categorie_id" value="{{ sousCategorie.categorie.id }}">
+            {% endif %}
+            <div class="form-field">
+                <label class="form-label">Nom</label>
+                <input type="text" name="nom" value="{{ sousCategorie.id ? sousCategorie.nomSousCat : '' }}" required>
+            </div>
+            <div class="modal-actions">
+                <button type="submit" class="add-btn">Enregistrer</button>
+                <button type="button" class="reset-btn" onclick="document.getElementById('modal').remove()">Annuler</button>
+            </div>
+        </form>
+    </div>
+</div>

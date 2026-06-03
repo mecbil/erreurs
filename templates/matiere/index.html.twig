@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Suivi des Erreurs — Bil{% endblock %}
+
+{% block subtitle %}Sélectionne une matière pour commencer{% endblock %}
+
+{% block body %}
+
+<section class="page" aria-labelledby="choixMatiere">
+    <h2 id="choixMatiere" class="accueil-label">Choisir une matière</h2>
+    <div class="matieres-grid" role="grid">
+        {% for matiere in matieres %}
+            <div class="matiere-card">
+                <a href="{{ path('app_matiere_show', {id: matiere.id}) }}" class="matiere-btn">
+                    <div class="matiere-dot" style="background: {{ matiere.couleurMat }}"></div>
+                    <div class="matiere-name">{{ matiere.nomMat }}</div>
+                    <div class="matiere-count">
+                        {{ matiere.categories|length }} catégorie{{ matiere.categories|length > 1 ? 's' : '' }}
+                    </div>
+                </a>
+                <div class="matiere-actions">
+                    <button class="icon-btn"
+                            hx-get="{{ path('app_matiere_form', {id: matiere.id}) }}"
+                            hx-target="body"
+                            hx-swap="beforeend">✏️</button>
+                    <form method="post" action="{{ path('app_matiere_delete', {id: matiere.id}) }}"
+                        onsubmit="return confirm('Supprimer {{ matiere.nomMat }} ?')">
+                        <button type="submit" class="icon-btn">🗑️</button>
+                    </form>
+                </div>
+            </div>
+        {% else %}
+            <div style="color:var(--muted);text-align:center;padding:40px;">
+                Aucune matière disponible
+            </div>
+        {% endfor %}
+    </div>
+
+    <button class="add-btn"
+            hx-get="{{ path('app_matiere_form', {id: 0}) }}"
+            hx-target="body"
+            hx-swap="beforeend">+ Ajouter une matière</button>
+
+</section>
+
+{% endblock %}

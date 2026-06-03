@@ -1,0 +1,234 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ matiere.nomMat }} — Suivi des Erreurs{% endblock %}
+
+{% block subtitle %}{{ matiere.nomMat }} — erreurs à l'écrit{% endblock %}
+
+{% block body %}
+
+<a href="{{ path('app_accueil') }}" class="back-btn">← Toutes les matières</a>
+
+{# STATS #}
+{% set totalErreurs = 0 %}
+{% set totalRevoir = 0 %}
+{% set totalMaitrise = 0 %}
+{% for categorie in matiere.categories %}
+    {% for sousCat in categorie.sousCategories %}
+        {% set totalErreurs = totalErreurs + sousCat.erreurs|length %}
+        {% for erreur in sousCat.erreurs %}
+            {% if erreur.statutErr == 'À revoir' %}{% set totalRevoir = totalRevoir + 1 %}{% endif %}
+            {% if erreur.statutErr == 'Maîtrisé' %}{% set totalMaitrise = totalMaitrise + 1 %}{% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endfor %}
+
+<div class="stats">
+    <div class="stat">
+        <div class="stat-label">Total</div>
+        <div class="stat-value total">{{ totalErreurs }}</div>
+    </div>
+    <div class="stat">
+        <div class="stat-label">À revoir</div>
+        <div class="stat-value review">{{ totalRevoir }}</div>
+    </div>
+    <div class="stat">
+        <div class="stat-label">Maîtrisées</div>
+        <div class="stat-value mastered">{{ totalMaitrise }}</div>
+    </div>
+</div>
+
+{# FILTRES #}
+<div class="filters">
+    <button class="filter-btn active"
+            hx-get="{{ path('app_erreur_filtre', {id: matiere.id}) }}?filtre=all"
+            hx-target="#categoriesContainer"
+            hx-swap="innerHTML">Toutes</button>
+
+    <button class="filter-btn"
+            hx-get="{{ path('app_erreur_filtre', {id: matiere.id}) }}?filtre=À revoir"
+            hx-target="#categoriesContainer"
+            hx-swap="innerHTML">À revoir</button>
+
+    <button class="filter-btn"
+            hx-get="{{ path('app_erreur_filtre', {id: matiere.id}) }}?filtre=En cours"
+            hx-target="#categoriesContainer"
+            hx-swap="innerHTML">En cours</button>
+
+    <button class="filter-btn"
+            hx-get="{{ path('app_erreur_filtre', {id: matiere.id}) }}?filtre=Maîtrisé"
+            hx-target="#categoriesContainer"
+            hx-swap="innerHTML">Maîtrisées</button>
+</div>
+
+{# CATEGORIES #}
+<div id="categoriesContainer">
+    {% for categorie in matiere.categories %}
+
+        {% set catCount = 0 %}
+        {% for sousCat in categorie.sousCategories %}
+            {% set catCount = catCount + sousCat.erreurs|length %}
+        {% endfor %}
+
+        <section class="cat-section">
+            <div class="cat-header-wrapper">
+                    <button type="button" class="cat-header">
+                        <div class="cat-dot" style="background: {{ matiere.couleurMat }}"></div>
+                        <div class="cat-name">{{ categorie.nomCat }}</div>
+                        <div class="cat-count">{{ catCount }}</div>
+                        <span class="cat-toggle">▼</span>
+                    </button>
+                    <div class="cat-actions">
+                        <button class="icon-btn"
+                                hx-get="{{ path('app_categorie_form', {id: categorie.id}) }}"
+                                hx-target="body"
+                                hx-swap="beforeend">✏️</button>
+                        <form method="post" action="{{ path('app_categorie_delete', {id: categorie.id}) }}"
+                            onsubmit="return confirm('Supprimer {{ categorie.nomCat }} ?')">
+                            <button type="submit" class="icon-btn">🗑️</button>
+                        </form>
+                    </div>
+            </div>
+
+            <div class="cat-body">
+                {% set hasErreurs = false %}
+                {% for sousCat in categorie.sousCategories %}
+                    {% set hasErreurs = true %}
+                    <div class="sousCat-line">
+                        <span class="sousCat-nom">{{ sousCat.nomSousCat }}</span>
+                        <span class="sousCat-count">{{ sousCat.erreurs|length }}</span>
+                        <div class="sousCat-actions">
+                            <button class="icon-btn"
+                                    hx-get="{{ path('app_souscategorie_form', {id: sousCat.id}) }}"
+                                    hx-target="body"
+                                    hx-swap="beforeend">✏️</button>
+                            <form method="post" action="{{ path('app_souscategorie_delete', {id: sousCat.id}) }}"
+                                onsubmit="return confirm('Supprimer {{ sousCat.nomSousCat }} ?')">
+                                <input type="hidden" name="matiere_id" value="{{ matiere.id }}">
+                                <button type="submit" class="icon-btn">🗑️</button>
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                {% if not hasErreurs %}
+                    <div class="empty-cat">Aucune sous-catégorie dans cette catégorie</div>
+                {% endif %}
+
+                <button class="add-btn"
+                        style="margin: 10px 18px; width: calc(100% - 36px);"
+                        hx-get="{{ path('app_souscategorie_form', {id: 0}) }}?categorie_id={{ categorie.id }}&matiere_id={{ matiere.id }}"
+                        hx-target="body"
+                        hx-swap="beforeend">+ Ajouter une sous-catégorie</button>
+            </div>
+
+        </section>
+    {% else %}
+        <div class="empty-cat">Aucune catégorie pour cette matière.</div>
+    {% endfor %}
+</div>
+
+<button class="add-btn"
+        style="margin-bottom: 28px;"
+        hx-get="{{ path('app_categorie_form', {id: 0}) }}?matiere_id={{ matiere.id }}"
+        hx-target="body"
+        hx-swap="beforeend">+ Ajouter une catégorie
+</button>
+
+{# FORMULAIRE #}
+<div class="form-section">
+    <div class="form-header">Ajouter une erreur</div>
+    <form class="form-body" id="errorForm" method="post"
+      action="{{ path('app_erreur_add') }}">
+        <input type="hidden" name="matiere_id" value="{{ matiere.id }}">
+        <div class="form-grid">
+
+            <div class="form-field">
+                <label class="form-label">Catégorie</label>
+                <select name="categorie_id" id="fCat" required
+                        hx-get="/souscategories"
+                        hx-trigger="change"
+                        hx-target="#fSub"
+                        hx-swap="innerHTML"
+                        hx-include="[name='categorie_id']">
+                    {% for categorie in matiere.categories %}
+                        <option value="{{ categorie.id }}">{{ categorie.nomCat }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label class="form-label">Sous-catégorie</label>
+                <select name="sous_categorie_id" id="fSub" required>
+                    {% for sousCat in matiere.categories|first.sousCategories %}
+                        <option value="{{ sousCat.id }}">{{ sousCat.nomSousCat }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label class="form-label">Erreur</label>
+                <input type="text" name="erreur" placeholder="ex : hesitation" required>
+            </div>
+
+            <div class="form-field">
+                <label class="form-label">Correction</label>
+                <input type="text" name="correction" placeholder="ex : hésitation" required>
+            </div>
+
+            <div class="form-field">
+                <label class="form-label">Statut</label>
+                <select name="statut">
+                    <option>À revoir</option>
+                    <option>En cours</option>
+                    <option>Maîtrisé</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label class="form-label">Révision dans</label>
+                <select name="revision">
+                    <option value="0">Aujourd'hui</option>
+                    <option value="1" selected>1 jour</option>
+                    <option value="3">3 jours</option>
+                    <option value="7">1 semaine</option>
+                    <option value="14">2 semaines</option>
+                </select>
+            </div>
+
+        </div>
+        <button type="submit" class="add-btn">Ajouter l'erreur</button>
+    </form>
+</div>
+
+<form method="post" action="{{ path('app_matiere_reset', {id: matiere.id}) }}">
+    <button type="submit" class="reset-btn"
+            onclick="return confirm('Supprimer toutes les erreurs de cette matière ?')">
+        Réinitialiser les erreurs de cette matière
+    </button>
+</form>
+
+<script>
+document.querySelectorAll('.cat-header').forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.classList.toggle('open');
+        // On remonte au wrapper, puis on cherche .cat-body
+        btn.closest('.cat-section').querySelector('.cat-body').classList.toggle('open');
+    });
+});
+
+const cats = {{ matiere.categories|map(c => {
+    'id': c.id,
+    'sousCats': c.sousCategories|map(s => {'id': s.id, 'nom': s.nomSousCat})
+})|json_encode|raw }};
+
+document.getElementById('fCat').addEventListener('change', function() {
+    const catId = parseInt(this.value);
+    const cat = cats.find(c => c.id === catId);
+    const fSub = document.getElementById('fSub');
+    fSub.innerHTML = cat.sousCats.map(s =>
+        `<option value="${s.id}">${s.nom}</option>`
+    ).join('');
+});
+</script>
+
+{% endblock %}

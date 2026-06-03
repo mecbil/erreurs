@@ -1,0 +1,24 @@
+<div class="modal-overlay" id="modal">
+    <div class="modal-box">
+        <div class="modal-header">
+            {% if categorie.id %}
+                Modifier {{ categorie.nomCat }}
+            {% else %}
+                Ajouter une catégorie
+            {% endif %}
+        </div>
+        <form method="post" action="{% if categorie.id %}{{ path('app_categorie_edit', {id: categorie.id}) }}{% else %}{{ path('app_categorie_add') }}{% endif %}">
+            {% if not categorie.id %}
+                <input type="hidden" name="matiere_id" value="{{ categorie.matiere.id }}">
+            {% endif %}
+            <div class="form-field">
+                <label class="form-label">Nom</label>
+                <input type="text" name="nom" value="{{ categorie.id ? categorie.nomCat : '' }}" required>
+            </div>
+            <div class="modal-actions">
+                <button type="submit" class="add-btn">Enregistrer</button>
+                <button type="button" class="reset-btn" onclick="document.getElementById('modal').remove()">Annuler</button>
+            </div>
+        </form>
+    </div>
+</div>
