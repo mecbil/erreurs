@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class SousCategorieController extends AbstractController
 {
-    #[Route('/souscategorie/add', name: 'app_souscategorie_add', methods: ['POST'])]
+    #[Route('/sous_categorie/add', name: 'app_souscategorie_add', methods: ['POST'])]
     public function add(
         Request $request,
         EntityManagerInterface $em
@@ -34,7 +34,7 @@ final class SousCategorieController extends AbstractController
         return $this->redirectToRoute('app_matiere_show', ['id' => $matiereId]);
     }
 
-    #[Route('/souscategorie/{id}/edit', name: 'app_souscategorie_edit', methods: ['POST'])]
+    #[Route('/sous_categorie/{id}/edit', name: 'app_souscategorie_edit', methods: ['POST'])]
     public function edit(
         SousCategorie $sousCategorie,
         Request $request,
@@ -51,7 +51,7 @@ final class SousCategorieController extends AbstractController
         return $this->redirectToRoute('app_matiere_show', ['id' => $matiereId]);
     }
 
-    #[Route('/souscategorie/{id}/delete', name: 'app_souscategorie_delete', methods: ['POST'])]
+    #[Route('/sous_categorie/{id}/delete', name: 'app_souscategorie_delete', methods: ['POST'])]
     public function delete(
         SousCategorie $sousCategorie,
         EntityManagerInterface $em
@@ -63,7 +63,7 @@ final class SousCategorieController extends AbstractController
         return $this->redirectToRoute('app_matiere_show', ['id' => $matiereId]);
     }
 
-    #[Route('/souscategorie/{id}/form', name: 'app_souscategorie_form')]
+    #[Route('/sous_categorie/{id}/form', name: 'app_souscategorie_form')]
     public function form(
         int $id,
         Request $request,
@@ -82,7 +82,7 @@ final class SousCategorieController extends AbstractController
             $sousCategorie = $sousCategorieRepository->find($id);
         }
 
-        return $this->render('souscategorie/_form.html.twig', [
+        return $this->render('sous_categorie/_form.html.twig', [
             'sousCategorie' => $sousCategorie,
             'matiereId' => $request->query->get('matiere_id') ?? $sousCategorie->getCategorie()->getMatiere()->getId(),
         ]);

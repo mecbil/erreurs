@@ -1,0 +1,1485 @@
+{
+    "matieres": [
+        {
+            "id": 1,
+            "nom": "Français",
+            "couleur": "#c8a96e"
+        },
+        {
+            "id": 2,
+            "nom": "Mathématique",
+            "couleur": "#5a9fd4"
+        },
+        {
+            "id": 3,
+            "nom": "Sciences",
+            "couleur": "#7c6fcd"
+        },
+        {
+            "id": 4,
+            "nom": "Technologie",
+            "couleur": "#ba6fa0"
+        },
+        {
+            "id": 5,
+            "nom": "Histoire",
+            "couleur": "#c87c4a"
+        },
+        {
+            "id": 6,
+            "nom": "Géographie",
+            "couleur": "#6fba8a"
+        },
+        {
+            "id": 7,
+            "nom": "EMC",
+            "couleur": "#c8a96e"
+        },
+        {
+            "id": 8,
+            "nom": "Anglais",
+            "couleur": "#6fba8a"
+        },
+        {
+            "id": 9,
+            "nom": "EPS",
+            "couleur": "#c87c4a"
+        },
+        {
+            "id": 10,
+            "nom": "CSE (Connaissance du Système Éducatif)",
+            "couleur": "#7c6fcd"
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "nom": "Homophones",
+            "matiere": "Français"
+        },
+        {
+            "id": 2,
+            "nom": "Accord du verbe",
+            "matiere": "Français"
+        },
+        {
+            "id": 3,
+            "nom": "Accord du participe passé",
+            "matiere": "Français"
+        },
+        {
+            "id": 4,
+            "nom": "Conjugaison",
+            "matiere": "Français"
+        },
+        {
+            "id": 5,
+            "nom": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 6,
+            "nom": "Accords dans le groupe nominal",
+            "matiere": "Français"
+        },
+        {
+            "id": 7,
+            "nom": "Ponctuation",
+            "matiere": "Français"
+        },
+        {
+            "id": 8,
+            "nom": "Syntaxe",
+            "matiere": "Français"
+        },
+        {
+            "id": 9,
+            "nom": "Vocabulaire & sens des mots",
+            "matiere": "Français"
+        },
+        {
+            "id": 10,
+            "nom": "Majuscules",
+            "matiere": "Français"
+        },
+        {
+            "id": 11,
+            "nom": "Vocabulaire mathématique",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 12,
+            "nom": "Théorèmes & propriétés",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 13,
+            "nom": "Mathématiciens & scientifiques",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 14,
+            "nom": "Notations & symboles",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 15,
+            "nom": "Connecteurs logiques",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 16,
+            "nom": "Vocabulaire scientifique",
+            "matiere": "Sciences"
+        },
+        {
+            "id": 17,
+            "nom": "Scientifiques & découvertes",
+            "matiere": "Sciences"
+        },
+        {
+            "id": 18,
+            "nom": "Notations & unités",
+            "matiere": "Sciences"
+        },
+        {
+            "id": 19,
+            "nom": "Vocabulaire technologique",
+            "matiere": "Technologie"
+        },
+        {
+            "id": 20,
+            "nom": "Noms propres & marques",
+            "matiere": "Technologie"
+        },
+        {
+            "id": 21,
+            "nom": "Notations & abréviations",
+            "matiere": "Technologie"
+        },
+        {
+            "id": 22,
+            "nom": "Vocabulaire historique",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 23,
+            "nom": "Personnages historiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 24,
+            "nom": "Événements historiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 25,
+            "nom": "Dates & repères chronologiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 26,
+            "nom": "Vocabulaire géographique",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 27,
+            "nom": "Pays & capitales",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 28,
+            "nom": "Lieux & régions",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 29,
+            "nom": "Notations & symboles cartographiques",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 30,
+            "nom": "Vocabulaire civique",
+            "matiere": "EMC"
+        },
+        {
+            "id": 31,
+            "nom": "Institutions & organes",
+            "matiere": "EMC"
+        },
+        {
+            "id": 32,
+            "nom": "Textes & lois",
+            "matiere": "EMC"
+        },
+        {
+            "id": 33,
+            "nom": "Personnages & symboles",
+            "matiere": "EMC"
+        },
+        {
+            "id": 34,
+            "nom": "Orthographe",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 35,
+            "nom": "Vocabulaire",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 36,
+            "nom": "Faux amis",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 37,
+            "nom": "Noms propres",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 38,
+            "nom": "Conjugaison & temps",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 39,
+            "nom": "Grammaire",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 40,
+            "nom": "Mauvais terme",
+            "matiere": "EPS"
+        },
+        {
+            "id": 41,
+            "nom": "Notion mal expliquée",
+            "matiere": "EPS"
+        },
+        {
+            "id": 42,
+            "nom": "Confusion de concepts",
+            "matiere": "EPS"
+        },
+        {
+            "id": 43,
+            "nom": "Mauvais terme",
+            "matiere": "CSE (Connaissance du Système Éducatif)"
+        },
+        {
+            "id": 44,
+            "nom": "Notion mal expliquée",
+            "matiere": "CSE (Connaissance du Système Éducatif)"
+        },
+        {
+            "id": 45,
+            "nom": "Confusion de concepts",
+            "matiere": "CSE (Connaissance du Système Éducatif)"
+        }
+    ],
+    "sous_categories": [
+        {
+            "id": 1,
+            "nom": "a \/ à",
+            "categorie": "Homophones",
+            "matiere": "Français"
+        },
+        {
+            "id": 2,
+            "nom": "ou \/ où",
+            "categorie": "Homophones",
+            "matiere": "Français"
+        },
+        {
+            "id": 3,
+            "nom": "on \/ ont",
+            "categorie": "Homophones",
+            "matiere": "Français"
+        },
+        {
+            "id": 4,
+            "nom": "son \/ sont",
+            "categorie": "Homophones",
+            "matiere": "Français"
+        },
+        {
+            "id": 5,
+            "nom": "ce \/ se",
+            "categorie": "Homophones",
+            "matiere": "Français"
+        },
+        {
+            "id": 6,
+            "nom": "mes \/ mais \/ met",
+            "categorie": "Homophones",
+            "matiere": "Français"
+        },
+        {
+            "id": 7,
+            "nom": "la \/ là \/ l'a",
+            "categorie": "Homophones",
+            "matiere": "Français"
+        },
+        {
+            "id": 8,
+            "nom": "Sujet inversé",
+            "categorie": "Accord du verbe",
+            "matiere": "Français"
+        },
+        {
+            "id": 9,
+            "nom": "Sujet collectif",
+            "categorie": "Accord du verbe",
+            "matiere": "Français"
+        },
+        {
+            "id": 10,
+            "nom": "Sujet composé",
+            "categorie": "Accord du verbe",
+            "matiere": "Français"
+        },
+        {
+            "id": 11,
+            "nom": "Verbe séparé du sujet",
+            "categorie": "Accord du verbe",
+            "matiere": "Français"
+        },
+        {
+            "id": 12,
+            "nom": "Avec être",
+            "categorie": "Accord du participe passé",
+            "matiere": "Français"
+        },
+        {
+            "id": 13,
+            "nom": "Avec avoir",
+            "categorie": "Accord du participe passé",
+            "matiere": "Français"
+        },
+        {
+            "id": 14,
+            "nom": "Verbe pronominal",
+            "categorie": "Accord du participe passé",
+            "matiere": "Français"
+        },
+        {
+            "id": 15,
+            "nom": "Présent de l'indicatif",
+            "categorie": "Conjugaison",
+            "matiere": "Français"
+        },
+        {
+            "id": 16,
+            "nom": "Imparfait",
+            "categorie": "Conjugaison",
+            "matiere": "Français"
+        },
+        {
+            "id": 17,
+            "nom": "Futur simple",
+            "categorie": "Conjugaison",
+            "matiere": "Français"
+        },
+        {
+            "id": 18,
+            "nom": "Conditionnel présent",
+            "categorie": "Conjugaison",
+            "matiere": "Français"
+        },
+        {
+            "id": 19,
+            "nom": "Subjonctif présent",
+            "categorie": "Conjugaison",
+            "matiere": "Français"
+        },
+        {
+            "id": 20,
+            "nom": "Passé composé",
+            "categorie": "Conjugaison",
+            "matiere": "Français"
+        },
+        {
+            "id": 21,
+            "nom": "Passé simple",
+            "categorie": "Conjugaison",
+            "matiere": "Français"
+        },
+        {
+            "id": 22,
+            "nom": "Doublement de consonne",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 23,
+            "nom": "Accents manquants",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 24,
+            "nom": "Lettres muettes",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 25,
+            "nom": "Terminaisons en -eur\/-eux\/-eux",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 26,
+            "nom": "Mots en -tion\/-sion",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 27,
+            "nom": "Adjectif épithète",
+            "categorie": "Accords dans le groupe nominal",
+            "matiere": "Français"
+        },
+        {
+            "id": 28,
+            "nom": "Adjectif attribut",
+            "categorie": "Accords dans le groupe nominal",
+            "matiere": "Français"
+        },
+        {
+            "id": 29,
+            "nom": "Déterminant",
+            "categorie": "Accords dans le groupe nominal",
+            "matiere": "Français"
+        },
+        {
+            "id": 30,
+            "nom": "Nom composé",
+            "categorie": "Accords dans le groupe nominal",
+            "matiere": "Français"
+        },
+        {
+            "id": 31,
+            "nom": "Virgule",
+            "categorie": "Ponctuation",
+            "matiere": "Français"
+        },
+        {
+            "id": 32,
+            "nom": "Point-virgule",
+            "categorie": "Ponctuation",
+            "matiere": "Français"
+        },
+        {
+            "id": 33,
+            "nom": "Deux-points",
+            "categorie": "Ponctuation",
+            "matiere": "Français"
+        },
+        {
+            "id": 34,
+            "nom": "Guillemets",
+            "categorie": "Ponctuation",
+            "matiere": "Français"
+        },
+        {
+            "id": 35,
+            "nom": "Tirets & parenthèses",
+            "categorie": "Ponctuation",
+            "matiere": "Français"
+        },
+        {
+            "id": 36,
+            "nom": "Phrase mal construite",
+            "categorie": "Syntaxe",
+            "matiere": "Français"
+        },
+        {
+            "id": 37,
+            "nom": "Répétition inutile",
+            "categorie": "Syntaxe",
+            "matiere": "Français"
+        },
+        {
+            "id": 38,
+            "nom": "Mauvais ordre des mots",
+            "categorie": "Syntaxe",
+            "matiere": "Français"
+        },
+        {
+            "id": 39,
+            "nom": "Phrase trop longue",
+            "categorie": "Syntaxe",
+            "matiere": "Français"
+        },
+        {
+            "id": 40,
+            "nom": "Contresens",
+            "categorie": "Vocabulaire & sens des mots",
+            "matiere": "Français"
+        },
+        {
+            "id": 41,
+            "nom": "Mot impropre",
+            "categorie": "Vocabulaire & sens des mots",
+            "matiere": "Français"
+        },
+        {
+            "id": 42,
+            "nom": "Pléonasme",
+            "categorie": "Vocabulaire & sens des mots",
+            "matiere": "Français"
+        },
+        {
+            "id": 43,
+            "nom": "Registre de langue",
+            "categorie": "Vocabulaire & sens des mots",
+            "matiere": "Français"
+        },
+        {
+            "id": 44,
+            "nom": "Noms propres",
+            "categorie": "Majuscules",
+            "matiere": "Français"
+        },
+        {
+            "id": 45,
+            "nom": "Débuts de phrase",
+            "categorie": "Majuscules",
+            "matiere": "Français"
+        },
+        {
+            "id": 46,
+            "nom": "Titres & fonctions",
+            "categorie": "Majuscules",
+            "matiere": "Français"
+        },
+        {
+            "id": 47,
+            "nom": "Noms d'institutions",
+            "categorie": "Majuscules",
+            "matiere": "Français"
+        },
+        {
+            "id": 48,
+            "nom": "Géométrie",
+            "categorie": "Vocabulaire mathématique",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 49,
+            "nom": "Algèbre",
+            "categorie": "Vocabulaire mathématique",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 50,
+            "nom": "Arithmétique",
+            "categorie": "Vocabulaire mathématique",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 51,
+            "nom": "Statistiques",
+            "categorie": "Vocabulaire mathématique",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 52,
+            "nom": "Analyse",
+            "categorie": "Vocabulaire mathématique",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 53,
+            "nom": "Théorème de Pythagore",
+            "categorie": "Théorèmes & propriétés",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 54,
+            "nom": "Théorème de Thalès",
+            "categorie": "Théorèmes & propriétés",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 55,
+            "nom": "Théorème des milieux",
+            "categorie": "Théorèmes & propriétés",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 56,
+            "nom": "Propriétés des angles",
+            "categorie": "Théorèmes & propriétés",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 57,
+            "nom": "Propriétés des triangles",
+            "categorie": "Théorèmes & propriétés",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 58,
+            "nom": "Mathématiciens grecs",
+            "categorie": "Mathématiciens & scientifiques",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 59,
+            "nom": "Mathématiciens modernes",
+            "categorie": "Mathématiciens & scientifiques",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 60,
+            "nom": "Scientifiques liés aux maths",
+            "categorie": "Mathématiciens & scientifiques",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 61,
+            "nom": "Symboles d'ensemble",
+            "categorie": "Notations & symboles",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 62,
+            "nom": "Symboles d'inégalité",
+            "categorie": "Notations & symboles",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 63,
+            "nom": "Notations de fonctions",
+            "categorie": "Notations & symboles",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 64,
+            "nom": "Symboles géométriques",
+            "categorie": "Notations & symboles",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 65,
+            "nom": "Connecteurs de déduction",
+            "categorie": "Connecteurs logiques",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 66,
+            "nom": "Connecteurs de condition",
+            "categorie": "Connecteurs logiques",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 67,
+            "nom": "Connecteurs de conclusion",
+            "categorie": "Connecteurs logiques",
+            "matiere": "Mathématique"
+        },
+        {
+            "id": 68,
+            "nom": "Biologie",
+            "categorie": "Vocabulaire scientifique",
+            "matiere": "Sciences"
+        },
+        {
+            "id": 69,
+            "nom": "Physique",
+            "categorie": "Vocabulaire scientifique",
+            "matiere": "Sciences"
+        },
+        {
+            "id": 70,
+            "nom": "Chimie",
+            "categorie": "Vocabulaire scientifique",
+            "matiere": "Sciences"
+        },
+        {
+            "id": 71,
+            "nom": "Sciences de la Terre",
+            "categorie": "Vocabulaire scientifique",
+            "matiere": "Sciences"
+        },
+        {
+            "id": 72,
+            "nom": "Biologistes",
+            "categorie": "Scientifiques & découvertes",
+            "matiere": "Sciences"
+        },
+        {
+            "id": 73,
+            "nom": "Physiciens",
+            "categorie": "Scientifiques & découvertes",
+            "matiere": "Sciences"
+        },
+        {
+            "id": 74,
+            "nom": "Chimistes",
+            "categorie": "Scientifiques & découvertes",
+            "matiere": "Sciences"
+        },
+        {
+            "id": 75,
+            "nom": "Naturalistes",
+            "categorie": "Scientifiques & découvertes",
+            "matiere": "Sciences"
+        },
+        {
+            "id": 76,
+            "nom": "Unités du système SI",
+            "categorie": "Notations & unités",
+            "matiere": "Sciences"
+        },
+        {
+            "id": 77,
+            "nom": "Formules chimiques",
+            "categorie": "Notations & unités",
+            "matiere": "Sciences"
+        },
+        {
+            "id": 78,
+            "nom": "Symboles physiques",
+            "categorie": "Notations & unités",
+            "matiere": "Sciences"
+        },
+        {
+            "id": 79,
+            "nom": "Numérique & informatique",
+            "categorie": "Vocabulaire technologique",
+            "matiere": "Technologie"
+        },
+        {
+            "id": 80,
+            "nom": "Mécanique",
+            "categorie": "Vocabulaire technologique",
+            "matiere": "Technologie"
+        },
+        {
+            "id": 81,
+            "nom": "Matériaux",
+            "categorie": "Vocabulaire technologique",
+            "matiere": "Technologie"
+        },
+        {
+            "id": 82,
+            "nom": "Énergie",
+            "categorie": "Vocabulaire technologique",
+            "matiere": "Technologie"
+        },
+        {
+            "id": 83,
+            "nom": "Inventeurs",
+            "categorie": "Noms propres & marques",
+            "matiere": "Technologie"
+        },
+        {
+            "id": 84,
+            "nom": "Standards & protocoles",
+            "categorie": "Noms propres & marques",
+            "matiere": "Technologie"
+        },
+        {
+            "id": 85,
+            "nom": "Marques technologiques",
+            "categorie": "Noms propres & marques",
+            "matiere": "Technologie"
+        },
+        {
+            "id": 86,
+            "nom": "Sigles informatiques",
+            "categorie": "Notations & abréviations",
+            "matiere": "Technologie"
+        },
+        {
+            "id": 87,
+            "nom": "Unités technologiques",
+            "categorie": "Notations & abréviations",
+            "matiere": "Technologie"
+        },
+        {
+            "id": 88,
+            "nom": "Abréviations techniques",
+            "categorie": "Notations & abréviations",
+            "matiere": "Technologie"
+        },
+        {
+            "id": 89,
+            "nom": "Antiquité",
+            "categorie": "Vocabulaire historique",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 90,
+            "nom": "Moyen Âge",
+            "categorie": "Vocabulaire historique",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 91,
+            "nom": "Époque moderne",
+            "categorie": "Vocabulaire historique",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 92,
+            "nom": "Époque contemporaine",
+            "categorie": "Vocabulaire historique",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 93,
+            "nom": "Rois & empereurs",
+            "categorie": "Personnages historiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 94,
+            "nom": "Révolutionnaires",
+            "categorie": "Personnages historiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 95,
+            "nom": "Personnages politiques",
+            "categorie": "Personnages historiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 96,
+            "nom": "Personnages religieux",
+            "categorie": "Personnages historiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 97,
+            "nom": "Révolutions",
+            "categorie": "Événements historiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 98,
+            "nom": "Guerres & batailles",
+            "categorie": "Événements historiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 99,
+            "nom": "Traités & accords",
+            "categorie": "Événements historiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 100,
+            "nom": "Découvertes & explorations",
+            "categorie": "Événements historiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 101,
+            "nom": "Dates clés Antiquité",
+            "categorie": "Dates & repères chronologiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 102,
+            "nom": "Dates clés Moyen Âge",
+            "categorie": "Dates & repères chronologiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 103,
+            "nom": "Dates clés Époque moderne",
+            "categorie": "Dates & repères chronologiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 104,
+            "nom": "Dates clés Époque contemporaine",
+            "categorie": "Dates & repères chronologiques",
+            "matiere": "Histoire"
+        },
+        {
+            "id": 105,
+            "nom": "Relief & paysages",
+            "categorie": "Vocabulaire géographique",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 106,
+            "nom": "Climat & météo",
+            "categorie": "Vocabulaire géographique",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 107,
+            "nom": "Population & territoire",
+            "categorie": "Vocabulaire géographique",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 108,
+            "nom": "Aménagement & urbanisme",
+            "categorie": "Vocabulaire géographique",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 109,
+            "nom": "Europe",
+            "categorie": "Pays & capitales",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 110,
+            "nom": "Afrique",
+            "categorie": "Pays & capitales",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 111,
+            "nom": "Asie",
+            "categorie": "Pays & capitales",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 112,
+            "nom": "Amériques",
+            "categorie": "Pays & capitales",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 113,
+            "nom": "Océanie",
+            "categorie": "Pays & capitales",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 114,
+            "nom": "Fleuves & rivières",
+            "categorie": "Lieux & régions",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 115,
+            "nom": "Océans & mers",
+            "categorie": "Lieux & régions",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 116,
+            "nom": "Montagnes & reliefs",
+            "categorie": "Lieux & régions",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 117,
+            "nom": "Régions françaises",
+            "categorie": "Lieux & régions",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 118,
+            "nom": "Villes importantes",
+            "categorie": "Lieux & régions",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 119,
+            "nom": "Légendes",
+            "categorie": "Notations & symboles cartographiques",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 120,
+            "nom": "Échelles",
+            "categorie": "Notations & symboles cartographiques",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 121,
+            "nom": "Coordonnées géographiques",
+            "categorie": "Notations & symboles cartographiques",
+            "matiere": "Géographie"
+        },
+        {
+            "id": 122,
+            "nom": "Valeurs républicaines",
+            "categorie": "Vocabulaire civique",
+            "matiere": "EMC"
+        },
+        {
+            "id": 123,
+            "nom": "Droits & libertés",
+            "categorie": "Vocabulaire civique",
+            "matiere": "EMC"
+        },
+        {
+            "id": 124,
+            "nom": "Devoirs du citoyen",
+            "categorie": "Vocabulaire civique",
+            "matiere": "EMC"
+        },
+        {
+            "id": 125,
+            "nom": "Laïcité",
+            "categorie": "Vocabulaire civique",
+            "matiere": "EMC"
+        },
+        {
+            "id": 126,
+            "nom": "Institutions françaises",
+            "categorie": "Institutions & organes",
+            "matiere": "EMC"
+        },
+        {
+            "id": 127,
+            "nom": "Institutions européennes",
+            "categorie": "Institutions & organes",
+            "matiere": "EMC"
+        },
+        {
+            "id": 128,
+            "nom": "Institutions internationales",
+            "categorie": "Institutions & organes",
+            "matiere": "EMC"
+        },
+        {
+            "id": 129,
+            "nom": "Constitution",
+            "categorie": "Textes & lois",
+            "matiere": "EMC"
+        },
+        {
+            "id": 130,
+            "nom": "Déclarations des droits",
+            "categorie": "Textes & lois",
+            "matiere": "EMC"
+        },
+        {
+            "id": 131,
+            "nom": "Lois fondamentales",
+            "categorie": "Textes & lois",
+            "matiere": "EMC"
+        },
+        {
+            "id": 132,
+            "nom": "Textes européens",
+            "categorie": "Textes & lois",
+            "matiere": "EMC"
+        },
+        {
+            "id": 133,
+            "nom": "Symboles républicains",
+            "categorie": "Personnages & symboles",
+            "matiere": "EMC"
+        },
+        {
+            "id": 134,
+            "nom": "Figures historiques républicaines",
+            "categorie": "Personnages & symboles",
+            "matiere": "EMC"
+        },
+        {
+            "id": 135,
+            "nom": "Présidents de la République",
+            "categorie": "Personnages & symboles",
+            "matiere": "EMC"
+        },
+        {
+            "id": 136,
+            "nom": "Mots courants mal écrits",
+            "categorie": "Orthographe",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 137,
+            "nom": "Doublement de consonne",
+            "categorie": "Orthographe",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 138,
+            "nom": "Terminaisons -tion\/-sion\/-cion",
+            "categorie": "Orthographe",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 139,
+            "nom": "Lettres muettes",
+            "categorie": "Orthographe",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 140,
+            "nom": "Vocabulaire scolaire",
+            "categorie": "Vocabulaire",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 141,
+            "nom": "Vocabulaire civique",
+            "categorie": "Vocabulaire",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 142,
+            "nom": "Vocabulaire quotidien",
+            "categorie": "Vocabulaire",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 143,
+            "nom": "Faux amis courants",
+            "categorie": "Faux amis",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 144,
+            "nom": "Faux amis scolaires",
+            "categorie": "Faux amis",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 145,
+            "nom": "Pays & nationalités",
+            "categorie": "Noms propres",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 146,
+            "nom": "Villes anglophones",
+            "categorie": "Noms propres",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 147,
+            "nom": "Personnages & institutions",
+            "categorie": "Noms propres",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 148,
+            "nom": "Present simple",
+            "categorie": "Conjugaison & temps",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 149,
+            "nom": "Past simple",
+            "categorie": "Conjugaison & temps",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 150,
+            "nom": "Present perfect",
+            "categorie": "Conjugaison & temps",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 151,
+            "nom": "Conditionnel & subjonctif",
+            "categorie": "Conjugaison & temps",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 152,
+            "nom": "Articles",
+            "categorie": "Grammaire",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 153,
+            "nom": "Prépositions",
+            "categorie": "Grammaire",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 154,
+            "nom": "Pluriels irréguliers",
+            "categorie": "Grammaire",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 155,
+            "nom": "Comparatifs & superlatifs",
+            "categorie": "Grammaire",
+            "matiere": "Anglais"
+        },
+        {
+            "id": 156,
+            "nom": "Vocabulaire moteur",
+            "categorie": "Mauvais terme",
+            "matiere": "EPS"
+        },
+        {
+            "id": 157,
+            "nom": "Vocabulaire didactique",
+            "categorie": "Mauvais terme",
+            "matiere": "EPS"
+        },
+        {
+            "id": 158,
+            "nom": "Vocabulaire des APSA",
+            "categorie": "Mauvais terme",
+            "matiere": "EPS"
+        },
+        {
+            "id": 159,
+            "nom": "Compétences motrices",
+            "categorie": "Notion mal expliquée",
+            "matiere": "EPS"
+        },
+        {
+            "id": 160,
+            "nom": "Sécurité & règles",
+            "categorie": "Notion mal expliquée",
+            "matiere": "EPS"
+        },
+        {
+            "id": 161,
+            "nom": "Évaluation en EPS",
+            "categorie": "Notion mal expliquée",
+            "matiere": "EPS"
+        },
+        {
+            "id": 162,
+            "nom": "APSA \/ Activité support",
+            "categorie": "Confusion de concepts",
+            "matiere": "EPS"
+        },
+        {
+            "id": 163,
+            "nom": "Compétence \/ Performance",
+            "categorie": "Confusion de concepts",
+            "matiere": "EPS"
+        },
+        {
+            "id": 164,
+            "nom": "Cycle \/ Séance",
+            "categorie": "Confusion de concepts",
+            "matiere": "EPS"
+        },
+        {
+            "id": 165,
+            "nom": "Vocabulaire institutionnel",
+            "categorie": "Mauvais terme",
+            "matiere": "CSE (Connaissance du Système Éducatif)"
+        },
+        {
+            "id": 166,
+            "nom": "Vocabulaire pédagogique",
+            "categorie": "Mauvais terme",
+            "matiere": "CSE (Connaissance du Système Éducatif)"
+        },
+        {
+            "id": 167,
+            "nom": "Textes officiels",
+            "categorie": "Mauvais terme",
+            "matiere": "CSE (Connaissance du Système Éducatif)"
+        },
+        {
+            "id": 168,
+            "nom": "Organisation du système scolaire",
+            "categorie": "Notion mal expliquée",
+            "matiere": "CSE (Connaissance du Système Éducatif)"
+        },
+        {
+            "id": 169,
+            "nom": "Rôle des acteurs",
+            "categorie": "Notion mal expliquée",
+            "matiere": "CSE (Connaissance du Système Éducatif)"
+        },
+        {
+            "id": 170,
+            "nom": "Inclusion & handicap",
+            "categorie": "Notion mal expliquée",
+            "matiere": "CSE (Connaissance du Système Éducatif)"
+        },
+        {
+            "id": 171,
+            "nom": "École \/ Établissement",
+            "categorie": "Confusion de concepts",
+            "matiere": "CSE (Connaissance du Système Éducatif)"
+        },
+        {
+            "id": 172,
+            "nom": "Programme \/ Socle commun",
+            "categorie": "Confusion de concepts",
+            "matiere": "CSE (Connaissance du Système Éducatif)"
+        },
+        {
+            "id": 173,
+            "nom": "Évaluation \/ Notation",
+            "categorie": "Confusion de concepts",
+            "matiere": "CSE (Connaissance du Système Éducatif)"
+        },
+        {
+            "id": 174,
+            "nom": "Règle du e + double consonne",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 175,
+            "nom": "Nasales (an\/on\/en)",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 176,
+            "nom": "Voyelles (ai\/e\/è)",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 177,
+            "nom": "Pluriel irrégulier",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 178,
+            "nom": "Homophones",
+            "categorie": "Homophones",
+            "matiere": "Français"
+        }
+    ],
+    "erreurs": [
+        {
+            "id": 2,
+            "erreur": "eleve \/ eleves",
+            "correction": "élève \/ élèves",
+            "statut": "En cours",
+            "date_ajout": "2026-06-05",
+            "prochaine_revision": "2026-06-08",
+            "sous_categorie": "Accents manquants",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 3,
+            "erreur": "ecole",
+            "correction": "école",
+            "statut": "En cours",
+            "date_ajout": "2026-06-05",
+            "prochaine_revision": "2026-06-08",
+            "sous_categorie": "Accents manquants",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 4,
+            "erreur": "fenetres",
+            "correction": "fenêtres",
+            "statut": "En cours",
+            "date_ajout": "2026-06-05",
+            "prochaine_revision": "2026-06-06",
+            "sous_categorie": "Accents manquants",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 5,
+            "erreur": "énoncès",
+            "correction": "énoncés",
+            "statut": "En cours",
+            "date_ajout": "2026-06-05",
+            "prochaine_revision": "2026-06-06",
+            "sous_categorie": "Accents manquants",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 6,
+            "erreur": "éffacé",
+            "correction": "effacé",
+            "statut": "En cours",
+            "date_ajout": "2026-06-05",
+            "prochaine_revision": "2026-06-08",
+            "sous_categorie": "Accents manquants",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 7,
+            "erreur": "tans ou tens",
+            "correction": "temps",
+            "statut": "En cours",
+            "date_ajout": "2026-06-05",
+            "prochaine_revision": "2026-06-08",
+            "sous_categorie": "Nasales (an\/on\/en)",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 8,
+            "erreur": "blaissé",
+            "correction": "blessé",
+            "statut": "À revoir",
+            "date_ajout": "2026-06-05",
+            "prochaine_revision": "2026-06-06",
+            "sous_categorie": "Voyelles (ai\/e\/è)",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 9,
+            "erreur": "genoux",
+            "correction": "genou",
+            "statut": "À revoir",
+            "date_ajout": "2026-06-05",
+            "prochaine_revision": "2026-06-06",
+            "sous_categorie": "Pluriel irrégulier",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 10,
+            "erreur": "compte (pour histoire)",
+            "correction": "conte",
+            "statut": "À revoir",
+            "date_ajout": "2026-06-05",
+            "prochaine_revision": "2026-06-06",
+            "sous_categorie": "Homophones",
+            "categorie": "Homophones",
+            "matiere": "Français"
+        },
+        {
+            "id": 11,
+            "erreur": "importent",
+            "correction": "important",
+            "statut": "En cours",
+            "date_ajout": "2026-06-05",
+            "prochaine_revision": "2026-06-06",
+            "sous_categorie": "Nasales (an\/on\/en)",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 12,
+            "erreur": "entrainement",
+            "correction": "entraînement",
+            "statut": "En cours",
+            "date_ajout": "2026-06-05",
+            "prochaine_revision": "2026-06-06",
+            "sous_categorie": "Accents manquants",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        },
+        {
+            "id": 13,
+            "erreur": "vous etes",
+            "correction": "vous êtes",
+            "statut": "À revoir",
+            "date_ajout": "2026-06-05",
+            "prochaine_revision": "2026-06-06",
+            "sous_categorie": "Accents manquants",
+            "categorie": "Orthographe lexicale",
+            "matiere": "Français"
+        }
+    ]
+}
