@@ -31,16 +31,16 @@ class ExportOrthographeCommand extends Command
     {
         $io = new SymfonyStyle($input, $output);
 
-        $matieres     = $this->matiereRepo->findAll();
-        $categories   = $this->categorieRepo->findAll();
+        $matieres       = $this->matiereRepo->findAll();
+        $categories     = $this->categorieRepo->findAll();
         $sousCategories = $this->sousCategorieRepo->findAll();
-        $erreurs      = $this->erreurRepo->findAll();
+        $erreurs        = $this->erreurRepo->findAll();
 
         $export = [
             'matieres' => array_map(fn($m) => [
-                'id'       => $m->getId(),
-                'nom'      => $m->getNomMat(),
-                'couleur'  => $m->getCouleurMat(),
+                'id'      => $m->getId(),
+                'nom'     => $m->getNomMat(),
+                'couleur' => $m->getCouleurMat(),
             ], $matieres),
 
             'categories' => array_map(fn($c) => [
@@ -57,19 +57,19 @@ class ExportOrthographeCommand extends Command
             ], $sousCategories),
 
             'erreurs' => array_map(fn($e) => [
-                'id'              => $e->getId(),
-                'erreur'          => $e->getErreurTxt(),
-                'correction'      => $e->getCorrectionTxt(),
-                'statut'          => $e->getStatutErr(),
-                'date_ajout'      => $e->getAddedErr()?->format('Y-m-d'),
+                'id'                 => $e->getId(),
+                'erreur'             => $e->getErreurTxt(),
+                'correction'         => $e->getCorrectionTxt(),
+                'statut'             => $e->getStatutErr(),
+                'date_ajout'         => $e->getAddedErr()?->format('Y-m-d'),
                 'prochaine_revision' => $e->getRevisionErr()?->format('Y-m-d'),
-                'sous_categorie'  => $e->getSousCategorie()?->getNomSousCat(),
-                'categorie'       => $e->getSousCategorie()?->getCategorie()?->getNomCat(),
-                'matiere'         => $e->getSousCategorie()?->getCategorie()?->getMatiere()?->getNomMat(),
+                'sous_categorie'     => $e->getSousCategorie()?->getNomSousCat(),
+                'categorie'          => $e->getSousCategorie()?->getCategorie()?->getNomCat(),
+                'matiere'            => $e->getSousCategorie()?->getCategorie()?->getMatiere()?->getNomMat(),
             ], $erreurs),
         ];
 
-        $json = json_encode($export, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        $json   = json_encode($export, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
         $chemin = __DIR__ . '/../../export_orthographe.json';
         file_put_contents($chemin, $json);
 
@@ -86,4 +86,4 @@ class ExportOrthographeCommand extends Command
 
         return Command::SUCCESS;
     }
-}cli_set_process_title
+}
